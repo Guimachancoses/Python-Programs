@@ -6,7 +6,7 @@ import pyautogui as pg
 import pandas as pd
 import csv
 
-
+# Scrap for translate page
 
 # Intall update for browser Chrome
 serv = Service(ChromeDriverManager().install())
@@ -19,8 +19,8 @@ with open(r'C:\Users\guilhermemachado\Documents\GitHub\Fontes_workspace\Selenium
     # Login in lansweeper
     nav.get("https://192.168.0.250:82/login.aspx?lo=1")
     sleep(10)
-    nav.find_element('xpath','//*[(@id = "NameTextBox")]').send_keys('guilhermemachancoses')
-    nav.find_element('xpath','//*[(@id = "PasswordTextBox")]').send_keys('Gui@19=')
+    nav.find_element('xpath','//*[(@id = "NameTextBox")]').send_keys('--------------')# login
+    nav.find_element('xpath','//*[(@id = "PasswordTextBox")]').send_keys('------')# Password
     nav.find_element('xpath','//*[@id="LoginButton"]').click()
     sleep(2)
 

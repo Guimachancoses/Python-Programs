@@ -17,8 +17,8 @@ print(now)
 
 # Login in site
 nav.get("https://garbuio.my3cx.com.br/#/login")
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('5201')
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('L7jWz9qZGs')
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('----')
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('--------')
 nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/button').click()
 sleep(3)
 while True:

@@ -1,3 +1,5 @@
+# Program to force start application, case user close.
+
 import os
 import psutil
 from time import sleep

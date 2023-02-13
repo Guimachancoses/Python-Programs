@@ -1,3 +1,5 @@
+# Program to force user stay on queues 3CX.
+
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
@@ -10,8 +12,8 @@ nav = webdriver.Chrome(service=serv)
 
 # Login in site
 nav.get("https://garbuio.my3cx.com.br/#/login")
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('5201')
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('L7jWz9qZGs')
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('---') # Login
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('------')# Password
 nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/button').click()
 sleep(2)
 while True:

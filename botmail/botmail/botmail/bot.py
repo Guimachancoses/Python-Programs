@@ -1,3 +1,5 @@
+# Automatization for make assign user mail
+
 from cmath import isnan
 from time import sleep, time
 from botcity.core import DesktopBot
