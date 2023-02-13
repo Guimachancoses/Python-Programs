@@ -49,4 +49,3 @@ while True:
         sleep(1)
         nav.get('https://garbuio.my3cx.com.br/#/app/extensions')
         sleep(3)
-   ###
