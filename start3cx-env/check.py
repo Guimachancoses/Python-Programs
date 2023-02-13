@@ -10,3 +10,4 @@ while True:
     else:
         os.startfile(r'C:\Users\guilhermemachado\AppData\Local\Programs\3CXDesktopApp\3CXDesktopApp.exe')
     sleep(60)
+    ##
