@@ -35,5 +35,5 @@ while True:
     nav.find_element('xpath','/html/body/div[1]/div/div/div/div[1]/button').click()
     sleep(1)
     nav.get('https://garbuio.my3cx.com.br/#/app/extensions')
-    sleep(15)
+    sleep(10)
 
