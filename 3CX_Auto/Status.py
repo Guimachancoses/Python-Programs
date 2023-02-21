@@ -13,16 +13,18 @@ serv = Service(ChromeDriverManager().install())
 nav = webdriver.Chrome(service=serv, chrome_options=options)
 
 now = datetime.datetime.now()
+current_time = now.strftime("%H:%M:%S")
+
 print(now)
 
 # Login in site
 nav.get("https://garbuio.my3cx.com.br/#/login")
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('----')
-nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('--------')
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[1]/input').send_keys('5201')
+nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/div/div[2]/input').send_keys('L7jWz9qZGs')
 nav.find_element('xpath','//*[@id="content"]/login-component/div/div/form/button').click()
 sleep(3)
 while True:
-    if (now != '13:30:00' and now != '07:00:00'):
+    if current_time != '13:30:00' and current_time != '07:00:00':
         # Navegate for force user on the queues:
         nav.find_element('xpath','//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a').click()
         sleep(1)
