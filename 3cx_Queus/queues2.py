@@ -7,7 +7,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
-
+from selenium.common.exceptions import WebDriverException
+from ChromeDriverSelenium import update_chrome_driver
 
 def login(browser):
     browser.get("https://garbuio.my3cx.com.br/#/login")
@@ -54,32 +55,40 @@ def navigate_to_extensions(browser):
 
 
 def main():
-    # Set browser - headless
+    # Define as opções do navegador
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless")
+    options.add_argument("--disable-notifications")
+    options.add_argument("--start-maximized")
+    # options.add_argument('--headless')
 
-    # Update ChromeDriver version
-    serv = Service(ChromeDriverManager().install())
-    browser = webdriver.Chrome(service=serv, chrome_options=options)
-
+    # Inicializa o driver do Chrome com as opções definidas
     try:
-        now = datetime.datetime.now()
-        print(now)
+        update_chrome_driver()
+        try:
+            browser = webdriver.Chrome(options=options)
+        except WebDriverException as e:
+            print(f"Ocorreu um erro ao iniciar o driver do Chrome após atualização: {e}")
+            exit()
 
-        # Set default wait time
-        browser.implicitly_wait(10)
+        try:
+            now = datetime.datetime.now()
+            print(now)
 
-        login(browser)
-        while True:
-            navigate_to_queues(browser)
-            force_user_on_queue(browser)
-            navigate_to_extensions(browser)
+            # Set default wait time
+            browser.implicitly_wait(10)
+
+            login(browser)
+            while True:
+                navigate_to_queues(browser)
+                force_user_on_queue(browser)
+                navigate_to_extensions(browser)
+        except Exception as e:
+            print(f'Error: {e}')
+            traceback.print_exc()
+        finally:
+            browser.quit()
+
     except Exception as e:
-        print(f'Error: {e}')
-        traceback.print_exc()
-    finally:
-        browser.quit()
-
-
+        print(f"Erro ao navegar para a página da web: {e}")
 if __name__ == '__main__':
     main()
