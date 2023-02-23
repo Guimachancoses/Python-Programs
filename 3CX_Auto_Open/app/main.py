@@ -1,4 +1,4 @@
-from app_launcher import check_and_launch_app
+from modules.app_launcher import check_and_launch_app
 import time
 
 def main():
