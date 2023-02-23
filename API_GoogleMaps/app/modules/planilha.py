@@ -12,7 +12,10 @@ def escrever_planilha(df, caminho_arquivo, nome_planilha):
     """
     Escreve as mudanças realizadas na planilha em um arquivo de Excel.
     """
-    writer = pd.ExcelWriter(caminho_arquivo, engine='openpyxl') 
-    writer.book = pd.load_workbook(caminho_arquivo)
-    df.to_excel(writer, sheet_name=nome_planilha, index=False)
-    writer.save()
+    try:
+        writer = pd.ExcelWriter(caminho_arquivo, engine='openpyxl') 
+        writer.book = pd.read_excel(caminho_arquivo)
+        df.to_excel(writer, sheet_name=nome_planilha, index=False)
+        writer.save()
+    except Exception as e:
+        print(f"Erro ao salvar a planilha: {e}")
