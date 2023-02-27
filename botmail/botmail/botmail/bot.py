@@ -14,7 +14,7 @@ class Bot(DesktopBot):
         
         # Importar a base de dados       
               
-        tabela = pd.read_excel(r'C:\Users\guilhermemachado\Documents\Bkp - USB\Voip\List_User_Assig_2023.xlsx')
+        tabela = pd.read_excel(r'C:\Users\guilhermemachado\Documents\robot\IT Vox - Modelo Ramais ATUALIZADO 17_08.xlsx')
         #print(tabela)
         
         # Para cada linha da base de dados faça:
@@ -160,8 +160,8 @@ class Bot(DesktopBot):
                 self.not_found("nome_user")
             self.paste(nome)
             self.enter()
-            self.alt_f4()           
-            
+            self.alt_f4()
+                       
                                
     def not_found(self, label):
         print(f"Element not found: {label}")
