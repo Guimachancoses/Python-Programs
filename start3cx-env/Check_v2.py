@@ -1,14 +1,14 @@
 import os
 import psutil
 import shutil
-import ctypes
 from time import sleep
 
-# Função verifica se a aplicação foi incerida no inicializar do Windows se não insere a mesma
+# Função verifica se a aplicação foi inserida no inicializar do Windows se não insere a mesma
 def check_start_folder(path_app):
     try:
         # Define o caminho para a pasta de inicialização do Windows
         startup_folder = os.path.join(os.getenv('APPDATA'), 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup')
+        print(startup_folder)
 
         # Define o caminho completo do arquivo que você deseja verificar
         arquivo = os.path.join(startup_folder, 'Check_v2.exe')
@@ -58,7 +58,7 @@ def main(username=None):
         app_name = "3CXDesktopApp.exe"
         
         # Caminho da Raiz do aplicativo de execução        
-        path_app = r'J:\TI\Utilidades\Auto_Run\Check_v2.exe'
+        path_app = r'\\sad01\DefaultPackageShare$\Installers\Check_v2.exe'
         
         try:
             check_start_folder(path_app)
