@@ -1,27 +1,30 @@
 # Automatization for make assign user mail
 
-from cmath import isnan
-from time import sleep, time
-from botcity.core import DesktopBot
-import pyautogui as pg
-
 import pandas as pd
-
 from time import sleep
+import pyautogui as pg
+from time import sleep
+from botcity.core import DesktopBot
 
 class Bot(DesktopBot):
-    def action(self, execution=None):
+    
+    def __init__(self, data_file_path, data_file_path2):
         
-        # Importar a base de dados       
+        # Caminho para lista de usuários
+        self.data_file_path = r'C:\Users\guilhermemachado\Documents\Bkp - USB\Voip\List_User_Assig_2023.xlsx'
+        # Caminho para modelo de assinatura
+        self.data_file_path2 = r"C:\Users\guilhermemachado\Documents\Bkp - USB\Voip\Assinatura.docx"
+        super().__init__()
+    
+    def action(self, execution=None):     
               
-        tabela = pd.read_excel(r'C:\Users\guilhermemachado\Documents\Bkp - USB\Voip\List_User_Assig_2023.xlsx')
+        tabela = pd.read_excel(self.data_file_path)
         #print(tabela)
         
         # Para cada linha da base de dados faça:
-        
         for linha in tabela.index:
             
-            self.execute(r"C:\Users\guilhermemachado\Documents\Bkp - USB\Voip\Assinatura.docx")
+            self.execute(self.data_file_path2)
             sleep(2)
                         
             nome = tabela.loc[linha, 'NomeComp']
@@ -31,7 +34,6 @@ class Bot(DesktopBot):
             link_3cx = tabela.loc[linha, 'Link_3CX']
             
             # Mudar nome do usuário
-            
             if not self.find( "Name", matching=0.97, waiting_time=10000):
                 self.not_found("Name")
             self.double_click()
@@ -46,7 +48,6 @@ class Bot(DesktopBot):
                 self.enter()
             
             # Mudar Setor
-            
             if not self.find( "Sector", matching=0.97, waiting_time=10000):
                 self.not_found("Sector")
             self.double_click()
@@ -60,7 +61,6 @@ class Bot(DesktopBot):
                 self.enter()
             
             # Mudar Ramal
-            
             if not self.find( "0000", matching=0.97, waiting_time=10000):
                 self.not_found("0000")
             self.double_click()
@@ -72,7 +72,6 @@ class Bot(DesktopBot):
                 self.paste(telefone)
             
             # Mudar Email
-            
             if not self.find( "change_mailgarb", matching=0.97, waiting_time=10000):
                 self.not_found("change_mailgarb")                           
             self.click()
@@ -123,7 +122,6 @@ class Bot(DesktopBot):
             sleep(0.1)            
             
             # Mudar link 3CX
-            
             if not self.find( "Comigo", matching=0.97, waiting_time=10000):
                 self.not_found("Comigo")
             self.click()
@@ -152,8 +150,7 @@ class Bot(DesktopBot):
                 self.not_found("ckok2")
             self.click()                           
             
-            # Salvar assinatura com nome de usuário
-              
+            # Salvar assinatura com nome de usuário  
             pg.press('f12')      
             
             if not self.find( "nome_user", matching=0.97, waiting_time=10000):
@@ -169,8 +166,3 @@ class Bot(DesktopBot):
 
 if __name__ == '__main__':
     Bot.main()
-
-
-
-
-##
