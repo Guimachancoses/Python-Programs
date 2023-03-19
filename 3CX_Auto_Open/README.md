@@ -1,4 +1,4 @@
-3CX Desktop App Launcher
+# 3CX Desktop App Launcher
 
 Esse programa verifica se a aplicação 3CX Desktop App está em execução no computador e, caso não esteja, inicia a aplicação.
 
