@@ -1,7 +1,6 @@
 # Automatization for make assign user mail
 
 import pandas as pd
-from time import sleep
 import pyautogui as pg
 from time import sleep
 from botcity.core import DesktopBot
