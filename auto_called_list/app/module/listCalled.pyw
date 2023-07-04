@@ -46,16 +46,16 @@ def login(browser):
 
 def navigate_to_download(browser):
     try:
-        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+        WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="menu"]/ul/li[2]/a'))) \
             .click()
-        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+        WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="menu"]/ul/li[2]/ul/li[2]/a'))) \
             .click()
-        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+        WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="conteudo"]/div[5]/ng-view/div/div/div[2]/div[4]/div[1]/table/tbody/tr[1]/td[4]/div/button'))) \
             .click()
-        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+        WebDriverWait(browser, 5).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="conteudo"]/div[5]/ng-view/div/div/div[2]/div[4]/div[1]/table/tbody/tr[1]/td[4]/div/ul/li[1]/a'))) \
             .click()
 
