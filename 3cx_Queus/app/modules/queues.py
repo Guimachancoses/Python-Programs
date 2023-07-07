@@ -27,8 +27,6 @@ def navigate_to_queues(browser):
         WebDriverWait(browser, 3).until(EC.presence_of_element_located(
             (By.XPATH, '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a'))) \
             .click()
-        # browser.find_element(By.XPATH, '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a') \
-        #     .click()
         print("Navigated to queues!")
     except Exception as e:
         print(f'Error navigate in queue: {e}')
