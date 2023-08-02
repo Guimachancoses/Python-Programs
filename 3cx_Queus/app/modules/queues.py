@@ -11,10 +11,13 @@ from selenium.common.exceptions import WebDriverException
 from modules.ChromeDriverSelenium import update_chrome_driver
 from time import sleep
 
+
 def login(browser):
     browser.get("https://garbuio.my3cx.com.br/#/login")
-    login_field = browser.find_element(By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[1]/input')
-    password_field = browser.find_element(By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[2]/input')
+    login_field = browser.find_element(
+        By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[1]/input')
+    password_field = browser.find_element(
+        By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[2]/input')
     login_field.send_keys('5201')
     password_field.send_keys('L7jWz9qZGs')
     browser.find_element(By.XPATH, '//*[@id="content"]/login-component/div/div/form/button') \
@@ -31,16 +34,21 @@ def navigate_to_queues(browser):
     except Exception as e:
         print(f'Error navigate in queue: {e}')
 
+
 def force_user_on_queue(browser):
     try:
-        browser.find_element('xpath','//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a').click()
+        browser.find_element(
+            'xpath', '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a').click()
         sleep(1)
-        browser.find_element('xpath','//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
-        browser.find_element('xpath','//*[(@id = "btnStatus")]').click()
+        browser.find_element(
+            'xpath', '//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
+        browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()
         sleep(15)
-        browser.find_element('xpath','/html/body/div[1]/div/div/div/div[2]/select[2]/option[3]').click()
+        browser.find_element(
+            'xpath', '/html/body/div[1]/div/div/div/div[2]/select[2]/option[3]').click()
         sleep(1)
-        browser.find_element('xpath','/html/body/div[1]/div/div/div/div[1]/button').click()
+        browser.find_element(
+            'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
         sleep(1)
         print("User forced on queue successfully!")
     except Exception as e:
@@ -66,7 +74,8 @@ def main():
         try:
             browser = webdriver.Chrome(options=options)
         except WebDriverException as e:
-            print(f"Ocorreu um erro ao iniciar o driver do Chrome após atualização: {e}")
+            print(
+                f"Ocorreu um erro ao iniciar o driver do Chrome após atualização: {e}")
             exit()
 
         try:
@@ -89,4 +98,3 @@ def main():
 
     except Exception as e:
         print(f"Erro ao navegar para a página da web: {e}")
-
