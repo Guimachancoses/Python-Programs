@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import WebDriverException
-from modules.ChromeDriverSelenium import update_chrome_driver
+# from modules.ChromeDriverSelenium import update_chrome_driver
 from time import sleep
 
 
@@ -70,7 +70,7 @@ def main():
 
     # Inicializa o driver do Chrome com as opções definidas
     try:
-        update_chrome_driver()
+        # update_chrome_driver()
         try:
             browser = webdriver.Chrome(options=options)
         except WebDriverException as e:
