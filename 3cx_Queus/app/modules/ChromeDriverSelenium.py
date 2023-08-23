@@ -13,7 +13,7 @@ def get_latest_chromedriver_url():
     latest_version = response.read().decode('utf-8')
 
     if system == 'Windows':
-        return f"https://chromedriver.storage.googleapis.com/{latest_version}/chromedriver_win32.zip"
+        return f"https://chromedriver.storage.googleapis.com/{latest_version}/chromedriver_win64.zip"
     elif system == 'Linux':
         return f"https://chromedriver.storage.googleapis.com/{latest_version}/chromedriver_linux64.zip"
     elif system == 'Darwin':
@@ -58,8 +58,6 @@ def update_chrome_driver():
         print(f"Ocorreu um erro ao atualizar o Chrome Driver Selenium: {e}")
 
 # Resto do código permanece o mesmo...
-
-
 
 # Define as opções do navegador
 options = webdriver.ChromeOptions()
