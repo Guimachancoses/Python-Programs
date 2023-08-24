@@ -1,0 +1,75 @@
+1657733985169	geckodriver	INFO	Listening on 127.0.0.1:55767
+1657733993237	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "55768" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\EULERO~1\\AppData\\Local\\Temp\\rust_mozprofilevllmQX"
+1657733993791	Marionette	INFO	Marionette enabled
+1657733993797	Marionette	INFO	Listening on port 55781
+Read port: 55781
+WebDriver BiDi listening on ws://localhost:55768
+1657733993999	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\EULERO~1\\AppData\\Local\\Temp\\rust_mozprofilevllmQX\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55768/devtools/browser/0af0c674-a773-45ef-953d-d79dfbbac04a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1657734052895	Marionette	INFO	Stopped listening on port 55781
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1692879597732	geckodriver	INFO	Listening on 127.0.0.1:49943
+1692879600666	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "49944" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileUPfinl"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692879602394	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692879602603	Marionette	INFO	Listening on port 49951
+WebDriver BiDi listening on ws://127.0.0.1:49944
+Read port: 49951
+1692879603111	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:49944/devtools/browser/a9474154-13db-49f8-924d-57d50c8ad8fb
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cnw.vibraenergia.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cnw.vibraenergia.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cn.vibraenergia.com.br."
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sigt.br-petrobras.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://sigt.br-petrobras.com.br."
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1692879973726	geckodriver	INFO	Listening on 127.0.0.1:50111
+1692879976424	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50112" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileHOiCU5"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1692879980351	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1692879980601	Marionette	INFO	Listening on port 50135
+WebDriver BiDi listening on ws://127.0.0.1:50112
+Read port: 50135
+1692879981146	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50112/devtools/browser/15594ef8-b648-4e00-b76f-6465cc3aa6e5
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cnw.vibraenergia.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cnw.vibraenergia.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cn.vibraenergia.com.br."
+JavaScript error: resource:///modules/UrlbarUtils.sys.mjs, line 830: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIEffectiveTLDService.getKnownPublicSuffixFromHost]

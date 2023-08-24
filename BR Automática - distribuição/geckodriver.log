@@ -1,0 +1,404 @@
+1657734996316	geckodriver	INFO	Listening on 127.0.0.1:51526
+1657735004986	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51527" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilenjBBqG"
+1657735007644	Marionette	INFO	Marionette enabled
+1657735007654	Marionette	INFO	Listening on port 51538
+WebDriver BiDi listening on ws://localhost:51527
+Read port: 51538
+1657735007957	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilenjBBqG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51527/devtools/browser/28a2e2f6-e241-40eb-80fd-f697b0be25fd
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1657735158430	Marionette	INFO	Stopped listening on port 51538
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657736013229	geckodriver	INFO	Listening on 127.0.0.1:51704
+1657736021759	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51705" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileiWOEVE"
+1657736022861	Marionette	INFO	Marionette enabled
+1657736022874	Marionette	INFO	Listening on port 51714
+WebDriver BiDi listening on ws://localhost:51705
+Read port: 51714
+1657736023152	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileiWOEVE\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51705/devtools/browser/51f54226-cbab-43ed-814d-8760ce8b34c6
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1657831031705	geckodriver	INFO	Listening on 127.0.0.1:59254
+1657831040262	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59255" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofile9fo2Mn"
+1657831041617	Marionette	INFO	Marionette enabled
+1657831041625	Marionette	INFO	Listening on port 59264
+WebDriver BiDi listening on ws://localhost:59255
+Read port: 59264
+1657831041904	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofile9fo2Mn\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59255/devtools/browser/79e208a9-7177-41dc-a95a-ebebeaf29c6e
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1657831338804	geckodriver	INFO	Listening on 127.0.0.1:59346
+1657831347378	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59347" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilefQIk4Z"
+1657831348512	Marionette	INFO	Marionette enabled
+1657831348520	Marionette	INFO	Listening on port 59357
+WebDriver BiDi listening on ws://localhost:59347
+Read port: 59357
+1657831348764	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilefQIk4Z\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59347/devtools/browser/9377884b-88e7-435b-9500-8c07e960b662
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+Error("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileovHWrS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:61878/devtools/browser/8363530f-c3dc-4ec1-8e3d-8b7fcea2667a
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1657902309507	Marionette	INFO	Stopped listening on port 61887
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1657916730164	geckodriver	INFO	Listening on 127.0.0.1:50094
+1657916738623	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50095" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileMZ1HSp"
+1657916739967	Marionette	INFO	Marionette enabled
+1657916739979	Marionette	INFO	Listening on port 50106
+WebDriver BiDi listening on ws://localhost:50095
+Read port: 50106
+1657916740278	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileMZ1HSp\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50095/devtools/browser/10628644-37ab-4851-bcf0-67075532f803
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1658435819837	geckodriver	INFO	Listening on 127.0.0.1:50718
+1658435901440	geckodriver	INFO	Listening on 127.0.0.1:50736
+1658435909357	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "50737" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileEipHh3"
+1658435910843	Marionette	INFO	Marionette enabled
+1658435910854	Marionette	INFO	Listening on port 50746
+WebDriver BiDi listening on ws://localhost:50737
+Read port: 50746
+1658435911163	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileEipHh3\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:50737/devtools/browser/8efacece-6a3b-4980-ad30-2b2f5d2d8a3f
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+1658488953133	Marionette	INFO	Stopped listening on port 50746
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1659559947228	geckodriver	INFO	Listening on 127.0.0.1:60125
+1659559955822	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60126" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileaiUz05"
+1659560143147	geckodriver	INFO	Listening on 127.0.0.1:60203
+1659560146043	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60204" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofile9793nu"
+1659560147731	Marionette	INFO	Marionette enabled
+1659560147741	Marionette	INFO	Listening on port 60213
+WebDriver BiDi listening on ws://localhost:60204
+Read port: 60213
+1659560148120	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofile9793nu\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60204/devtools/browser/8a3b0e62-accd-44a4-a398-875b893dedbc
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+1659560310750	Marionette	INFO	Stopped listening on port 60213
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1659560377201	geckodriver	INFO	Listening on 127.0.0.1:60288
+1659560385742	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60289" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilewbEKNS"
+1659560387944	Marionette	INFO	Marionette enabled
+1659560387952	Marionette	INFO	Listening on port 60298
+WebDriver BiDi listening on ws://localhost:60289
+Read port: 60298
+1659560388211	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofilewbEKNS\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60289/devtools/browser/f5ccd330-996c-4e08-b679-0486cfad5bef
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://cn.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://sigt.br-petrobras.com.br/com.sap.portal.navigation.afp.dtn/scripts/dtn_functions.js?1f783d6d61f11cf9d37b114078e35296, line 1: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://sigt.br-petrobras.com.br"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript warning: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50, line 56: unreachable code after return statement
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+JavaScript error: https://srm.br-petrobras.com.br:8443/sap/public/bc/ur/nw7/js/lightspeed.js?3989CC155F50 line 3 > eval, line 1: TypeError: sSourceId is null
+1659609188870	Marionette	INFO	Stopped listening on port 60298
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1676917420573	geckodriver	INFO	Listening on 127.0.0.1:56433
+1676917423571	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56434" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileBtg6DV"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1676917424974	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1676917424989	Marionette	INFO	Listening on port 56441
+Read port: 56441
+WebDriver BiDi listening on ws://127.0.0.1:56434
+1676917425372	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\RODNEI~1\\AppData\\Local\\Temp\\rust_mozprofileBtg6DV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56434/devtools/browser/4a086a72-c6b5-4560-94a3-b60698602ec6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cn.br-petrobras.com.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://cn.br-petrobras.com.br."
+1676917503155	Marionette	INFO	Stopped listening on port 56441
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
