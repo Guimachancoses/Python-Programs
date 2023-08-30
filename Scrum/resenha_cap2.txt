@@ -1,0 +1,31 @@
+Resenha Cap-02
+
+O autor compartilha sua jornada como piloto de combate no Vietnã, destacando a importância de observar, avaliar, decidir e agir em situações de risco. 
+Ele aplicou esses princípios ao estudo de sistemas complexos, buscando entender como as células mudam de estados, o que o inspirou a aplicar essas ideias em equipes e organizações.
+
+Após a guerra, ele trabalhou em projetos de tecnologia, enfrentando problemas de eficiência. Para solucioná-los, criou uma equipe colaborativa semelhante ao Scrum, 
+que se tornou a divisão mais lucrativa da empresa, contribuindo para o desenvolvimento de caixas eletrônicos amplamente utilizados hoje.
+
+Após suas experiências militares e acadêmicas, o autor entra no mundo dos negócios com uma visão crítica sobre métodos ineficientes de trabalho. Enquanto trabalha em 
+projetos de tecnologia, ele encontra uma empresa de robótica que utiliza uma abordagem única, onde os robôs aprendem a agir com regras simples e colaboração. Isso inspira 
+o autor a questionar se uma abordagem semelhante poderia ser aplicada a equipes humanas, levando à auto-organização e otimização. Um cientista o encoraja a testar essa ideia.
+
+Ele busca uma maneira de coordenar pensadores independentes para alcançar alto desempenho. Inspirado por robôs adaptativos, ele traz essa ideia para equipes humanas na empresa Easel. 
+Abandonando o modelo em cascata, ele adota uma abordagem colaborativa baseada em um artigo sobre desenvolvimento de produtos. Isso resulta no nascimento do Scrum, uma metodologia que a equipe da 
+Easel utiliza para entregar produtos dentro do prazo, abaixo do orçamento e com menos erros. O autor continua a refinar o Scrum e compartilha seus princípios em um artigo com Ken Schwaber, observando seus benefícios 
+imediatos para as empresas.
+
+As equipes Scrum alcançam hiperprodutividade com aumento de 300-800% na produtividade e melhora na qualidade. O ciclo PDCA de medição e aprimoramento constante, 
+inspirado por Deming e usado pela Toyota, é aplicado às equipes Scrum. Um exemplo prático envolve a construção de aviões de papel, onde ciclos de planejamento, 
+execução, verificação e ação levam a melhorias significativas.
+
+No cenário de desenvolvimento de software caótico, o método em cascata falhou, levando a atrasos e projetos ineficazes. O exemplo da BellSouth ilustra a necessidade de 
+adaptação em um ambiente em constante mudança. O Scrum se baseia no ciclo PDCA, similar à abordagem da Toyota. No Japão, o Scrum é considerado um modo de vida, assim como o 
+conceito Shu Ha Ri nas artes marciais, que se relaciona à aprendizagem contínua até a maestria. O livro explora os princípios do Scrum para alcançar eficiência e excelência.
+
+Principais pontos:
+1. Evitar hesitação, observando, avaliando, decidindo e agindo.
+2. Buscar respostas em sistemas adaptativos.
+3. Equipes grandes são autônomas e orientadas por objetivos.
+4. Usar o ciclo PDCA: Planejar, Fazer, Verificar, Agir.
+5. Conceito Shu Ha Ri: Aprender, inovar, dominar.
