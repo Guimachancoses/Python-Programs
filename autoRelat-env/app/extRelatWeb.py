@@ -28,38 +28,50 @@ def login(browser):
 def navigate_to_queues(browser):
     try:
         WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+            (By.XPATH, '/html/body/div[3]/div[2]/div/div[1]/div/div[1]/button'))) \
+            .click()
+        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
             (By.XPATH, '/html/body/div[3]/div[2]/div/div[2]/div/div[2]/ul/li[6]/a'))) \
             .click()
+        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
+            (By.XPATH, '/html/body/div[2]/div[4]/div/div/div/div/input'))) \
+            .click()
+            
         print("Navigated to queues!")
+        # Store the main window handle
+        main_window_handle = browser.current_window_handle
+        
+        # Wait for a new window to appear
+        WebDriverWait(browser, 10).until(EC.number_of_windows_to_be(2))
+               
+        # Switch to the new window
+        for handle in browser.window_handles:
+            if handle != main_window_handle:
+                browser.switch_to.window(handle)
+                break
+        
+        # Return the URL of the new window
+        new_window_url = browser.current_url
+        browser.switch_to.window(main_window_handle)
+        return new_window_url
     except Exception as e:
         print(f'Error navigate in queue: {e}')
 
 
-# def force_user_on_queue(browser):
-#     try:
-#         browser.find_element(
-#             'xpath', '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a').click()
-#         sleep(1)
-#         browser.find_element(
-#             'xpath', '//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
-#         browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()
-#         sleep(15)
-#         browser.find_element(
-#             'xpath', '/html/body/div[1]/div/div/div/div[2]/select[2]/option[3]').click()
-#         sleep(1)
-#         browser.find_element(
-#             'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
-#         sleep(1)
-#         print("User forced on queue successfully!")
-#     except Exception as e:
-#         print(f'Error forcing user on queue: {e}')
-#         traceback.print_exc()
-
-
-# def navigate_to_extensions(browser):
-#     browser.get('https://garbuio.my3cx.com.br/#/app/extensions')
-#     print("Navigated to extensions!")
-
+def navigate_to_extractCsv(browser):
+    try:
+        browser.find_element(
+            'xpath','/html/body/table/tbody/tr[2]/td[2]/table/tbody/tr[2]/td/div/table/tbody/tr/td/table[1]/tbody/tr/td[1]/div/div/div[5]').click()
+        sleep(1)
+        browser.find_element(
+            'xpath', '/html/body/div[1]/table/tbody/tr[1]/td/div/div[1]/div[10]/div[2]').click()
+        sleep(3)
+        browser.find_element(
+            'xpath', '/html/body/div[1]/table/tbody/tr[1]/td/div/div[1]/div[10]/div[2]').click()
+        print("Extract successfully!")
+    except Exception as e:
+        print(f'Error Extract: {e}')
+        traceback.print_exc()
 
 def main():
     # Define as opções do navegador
@@ -86,10 +98,14 @@ def main():
             browser.implicitly_wait(5)
 
             login(browser)
-            # while True:
-            #     navigate_to_queues(browser)
-            #     force_user_on_queue(browser)
-            #     navigate_to_extensions(browser)
+            queue_url = navigate_to_queues(browser)
+            sleep(10)
+
+            if queue_url:
+                browser.get(queue_url)
+                navigate_to_extractCsv(browser)
+                sleep(10)
+
         except Exception as e:
             print(f'Error: {e}')
             traceback.print_exc()
