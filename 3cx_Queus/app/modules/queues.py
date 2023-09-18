@@ -50,9 +50,32 @@ def force_user_on_queue(browser):
         browser.find_element(
             'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
         sleep(1)
+        browser.find_element(
+            'xpath', '//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
         print("User forced on queue successfully!")
     except Exception as e:
         print(f'Error forcing user on queue: {e}')
+        traceback.print_exc()
+        
+def change_status(browser):
+    try:
+        userList = ['5020', '5022', '5051', '6009']
+        input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
+        
+        for user in userList:
+            browser.find_element('xpath', input_field_xpath).clear()  # Limpa o campo de entrada
+            browser.find_element('xpath', input_field_xpath).send_keys(user)  # Envia o número do ramal
+            sleep(1)
+            browser.find_element('xpath', '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/table/tbody/tr/td[1]/label/i').click()  # Marca a caixa de seleção do usuário
+            browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()  # Clica no botão de status
+            sleep(5)
+            browser.find_element('xpath', '/html/body/div[1]/div/div/div/div[2]/select[1]/option[2]').click()  # Seleciona a opção 'disponível'
+            sleep(1)
+            browser.find_element('xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()  # Fecha a janela de diálogo
+            sleep(1)
+            print(f"Ramal {user} forced on status successfully!")
+    except Exception as e:
+        print(f'Error forcing ramal {user} on status: {e}')
         traceback.print_exc()
 
 
@@ -79,16 +102,22 @@ def main():
             exit()
 
         try:
-            now = datetime.datetime.now()
-            print(now)
-
             # Set default wait time
             browser.implicitly_wait(5)
 
             login(browser)
             while True:
+                now = datetime.datetime.now()
                 navigate_to_queues(browser)
                 force_user_on_queue(browser)
+                                
+                # Verifique o horário atual
+                current_time = now.time()
+                print(current_time)
+                if (current_time >= datetime.time(8, 0) and current_time <= datetime.time(12, 0)) or \
+                   (current_time >= datetime.time(13, 0) and current_time <= datetime.time(18, 0)):
+                    change_status(browser)
+                    
                 navigate_to_extensions(browser)
         except Exception as e:
             print(f'Error: {e}')
