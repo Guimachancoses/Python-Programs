@@ -59,7 +59,7 @@ def force_user_on_queue(browser):
         
 def change_status(browser):
     try:
-        userList = ['5020', '5022', '5051', '6009']
+        userList = ['5078', '5002','5071','5020', '5051', '6009','5062','5022', '5009']
         input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
         
         for user in userList:
@@ -111,7 +111,7 @@ def main():
                 navigate_to_queues(browser)
                 force_user_on_queue(browser)
                                 
-                # Verifique o horário atual
+                # Verifique o horário atual entre às 08:00 e 12 horas
                 current_time = now.time()
                 print(current_time)
                 if (current_time >= datetime.time(8, 0) and current_time <= datetime.time(12, 0)) or \
