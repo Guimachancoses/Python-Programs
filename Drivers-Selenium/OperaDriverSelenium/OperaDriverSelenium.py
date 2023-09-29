@@ -82,5 +82,5 @@ finally:
     try:
         browser.quit()
     except NameError:
-        pass  # Não foi possível inicializar o driver, não precisa fechar o navegador
+        pass  # Não foi possível inicializar o driver, não precisa fechar o navegadorasas
 
