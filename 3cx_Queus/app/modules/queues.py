@@ -56,22 +56,33 @@ def force_user_on_queue(browser):
     except Exception as e:
         print(f'Error forcing user on queue: {e}')
         traceback.print_exc()
-        
+
+
 def change_status(browser):
     try:
-        userList = ['5078', '5002','5071','5020', '5051', '6009','5062','5022', '5009','5075']
+        userList = ['5078', '5002', '5071', '5020', '5051',
+                    '6009', '5062', '5022', '5009', '5075', '5064']
         input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
-        
+
         for user in userList:
-            browser.find_element('xpath', input_field_xpath).clear()  # Limpa o campo de entrada
-            browser.find_element('xpath', input_field_xpath).send_keys(user)  # Envia o número do ramal
+            # Limpa o campo de entrada
+            browser.find_element('xpath', input_field_xpath).clear()
+            browser.find_element('xpath', input_field_xpath).send_keys(
+                user)  # Envia o número do ramal
             sleep(1)
-            browser.find_element('xpath', '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/table/tbody/tr/td[1]/label/i').click()  # Marca a caixa de seleção do usuário
-            browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()  # Clica no botão de status
+            # Marca a caixa de seleção do usuário
+            browser.find_element(
+                'xpath', '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/table/tbody/tr/td[1]/label/i').click()
+            # Clica no botão de status
+            browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()
             sleep(5)
-            browser.find_element('xpath', '/html/body/div[1]/div/div/div/div[2]/select[1]/option[2]').click()  # Seleciona a opção 'disponível'
+            # Seleciona a opção 'disponível'
+            browser.find_element(
+                'xpath', '/html/body/div[1]/div/div/div/div[2]/select[1]/option[2]').click()
             sleep(1)
-            browser.find_element('xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()  # Fecha a janela de diálogo
+            # Fecha a janela de diálogo
+            browser.find_element(
+                'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
             sleep(1)
             print(f"Ramal {user} forced on status successfully!")
     except Exception as e:
@@ -110,14 +121,14 @@ def main():
                 now = datetime.datetime.now()
                 navigate_to_queues(browser)
                 force_user_on_queue(browser)
-                                
+
                 # Verifique o horário atual entre às 08:00 e 12 horas
                 current_time = now.time()
                 print(current_time)
                 if (current_time >= datetime.time(8, 0) and current_time <= datetime.time(12, 0)) or \
                    (current_time >= datetime.time(13, 0) and current_time <= datetime.time(18, 0)):
                     change_status(browser)
-                    
+
                 navigate_to_extensions(browser)
         except Exception as e:
             print(f'Error: {e}')
