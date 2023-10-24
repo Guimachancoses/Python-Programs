@@ -61,7 +61,7 @@ def force_user_on_queue(browser):
 def change_status(browser):
     try:
         userList = ['5078', '5002', '5071', '5020', '5051',
-                    '6009', '5062', '5022', '5009', '5075', '5064']
+                    '6009', '5062', '5022', '5009', '5075', '5064','1005']
         input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
 
         for user in userList:
