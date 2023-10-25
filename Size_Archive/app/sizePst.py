@@ -8,12 +8,10 @@ from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QIcon
 
 # função para adicionar no agendamento do iniciar do windows
-
-
 def add_to_startup():
     # Obtém o caminho para o arquivo Python
     python_exe = sys.executable
-    script_path = os.path.abspath(__file)
+    script_path = os.path.abspath(__file__)
 
     # Define o nome da chave de registro
     key_name = "VerifiquePST"
@@ -27,19 +25,15 @@ def add_to_startup():
         winreg.SetValueEx(key, key_name, 0, winreg.REG_SZ, full_path)
 
 # obter o tamanho do arquivo
-
-
 def obter_tamanho_arquivo_em_gb(caminho_arquivo):
     if os.path.exists(caminho_arquivo):
         tamanho_bytes = os.path.getsize(caminho_arquivo)
-        tamanho_gb = tamanho_bytes / (1024 ** 3)  # 1 gigabyte = 1024^3 bytes
+        tamanho_gb = int(tamanho_bytes / (1024 ** 3))  # 1 gigabyte = 1024^3 bytes
         return tamanho_gb
     else:
         return None
 
 # formatar o tamanho de bytes oara gigabytes
-
-
 def formatar_tamanho_em_gb(tamanho_gb):
     if tamanho_gb is not None:
         return f"{tamanho_gb:.2f} GB"
@@ -47,8 +41,6 @@ def formatar_tamanho_em_gb(tamanho_gb):
         return "Arquivo não encontrado"
 
 # verificar se o tamanho exece o maximo estábelecido
-
-
 def verificar_tamanho_pst(caminho_arquivo):
     tamanho_gb = obter_tamanho_arquivo_em_gb(caminho_arquivo)
     if tamanho_gb is not None:
@@ -57,8 +49,6 @@ def verificar_tamanho_pst(caminho_arquivo):
     return None
 
 # Função para obter o caminho do arquivo PST
-
-
 def obter_caminho_arquivo_pst():
     config = configparser.ConfigParser()
     config.read('config.ini')
@@ -68,8 +58,6 @@ def obter_caminho_arquivo_pst():
         return None
 
 # Função para configurar o caminho do arquivo PST
-
-
 def configurar_caminho_arquivo_pst(caminho):
     config = configparser.ConfigParser()
     if 'PST' not in config:
@@ -79,14 +67,12 @@ def configurar_caminho_arquivo_pst(caminho):
         config.write(configfile)
 
 # função para salvar o caminho do arquivo PST dentro do "config.ini"
-
-
 def salvar_caminho(janela_config, caminho_edit):
     caminho_arquivo = caminho_edit.text()
     configurar_caminho_arquivo_pst(caminho_arquivo)
     janela_config.close()
 
-
+# abrir a janela para encontrar o arquivo PST
 def abrir_dialogo_selecao_arquivo(caminho_edit):
     options = QFileDialog.Options()
     options |= QFileDialog.ReadOnly
@@ -100,11 +86,9 @@ def abrir_dialogo_selecao_arquivo(caminho_edit):
         print(f"Erro ao definir o caminho no campo de edição: {e}")
 
 # função para pedir o caminho absouluto do arquivo PST, caso não exista no arquivo "config.ini"
-
-
 def criar_janela_configuracao_caminho():
     janela_config = QMainWindow()
-    janela_config.setWindowTitle("Configurar Caminho PST")
+    janela_config.setWindowTitle("Monitor PST")
     janela_config.setWindowIcon(QIcon(
         fr"C:\Users\guilhermemachado\Documents\GitHub\Python-Programs\Size_Archive\alien.ico"))
     janela_config.setGeometry(100, 100, 400, 150)
@@ -113,6 +97,7 @@ def criar_janela_configuracao_caminho():
     janela_config.setCentralWidget(central_widget)
 
     layout = QVBoxLayout()
+    label1 = QLabel("Configurar caminho a ser monitorado")
     caminho_label = QLabel("Caminho do arquivo PST:")
 
     caminho_edit = QLineEdit()  # Crie um objeto QLineEdit separado para o campo de edição
@@ -125,7 +110,10 @@ def criar_janela_configuracao_caminho():
     salvar_button.clicked.connect(
         lambda: salvar_caminho(janela_config, caminho_edit))
 
+    layout.addSpacing(10)
+    layout.addWidget(label1)
     layout.addWidget(caminho_label)
+    layout.addSpacing(10)
     layout.addWidget(caminho_edit)
     layout.addWidget(selecionar_arquivo_button)
     layout.addWidget(salvar_button)
@@ -135,68 +123,88 @@ def criar_janela_configuracao_caminho():
     janela_config.show()
     return janela_config
 
-
+# menu
 def main():
-    # Verifica se o arquivo de configuração já possui um caminho armazenado
-    caminho_arquivo = obter_caminho_arquivo_pst()
+    
+    try:
+        # Verifica se o arquivo de configuração já possui um caminho armazenado
+        caminho_arquivo = obter_caminho_arquivo_pst()
 
-    if caminho_arquivo is None:
-        appin = QApplication(sys.argv)
-        # Se o caminho não estiver armazenado, abre a janela de configuração
-        janela_config = criar_janela_configuracao_caminho()
-        janela_config(sys.exit(appin.exec_()))
-        
-    # O restante do seu código permanece o mesmo
-    while True:
-        try:
-            tamanho_gb = obter_tamanho_arquivo_em_gb(caminho_arquivo)
-            tamanho_formatado = formatar_tamanho_em_gb(tamanho_gb)
-            aviso = verificar_tamanho_pst(caminho_arquivo)
-            sz = 40
-
-            if tamanho_gb > sz:
-
-                app = QApplication(sys.argv)
-                janela = QMainWindow()
-                janela.setWindowTitle("Tamanho PST")
-                janela.setWindowIcon(QIcon(
-                    fr"C:\Users\guilhermemachado\Documents\GitHub\Python-Programs\Size_Archive\alien.ico"))
-                janela.setGeometry(100, 100, 400, 200)
-
-                central_widget = QWidget(janela)
-                janela.setCentralWidget(central_widget)
-
-                layout = QVBoxLayout()
-                label = QLabel()
-
-                if tamanho_gb is not None:
-                    if tamanho_gb > sz:
-                        label.setText(
-                            f"O tamanho do arquivo PST é {tamanho_formatado}")
-                        if aviso:
-                            label.setText(aviso)
-                else:
-                    label.setText(
-                        f"O arquivo {caminho_arquivo} não foi encontrado")
+        if caminho_arquivo is None:
+            
+            # Se o caminho não estiver armazenado, abre a janela de configuração
+            appin = QApplication(sys.argv)
+            janela_config = criar_janela_configuracao_caminho()
+            janela_config(sys.exit(appin.exec_()))
+            
+    except Exception as e:
+        print (f'Erro: {e}')
+    finally:
+       
+        while True:
+            try:
+                
+                try:
+                
+                    if caminho_arquivo is None:
+                        caminho_arquivo = obter_caminho_arquivo_pst()
+                        if caminho_arquivo is None:
+                            False
+                            break
+                        
+                except Exception as e:
+                    print (f'Erro: {e}')
+                    break
+                    
+                tamanho_gb = obter_tamanho_arquivo_em_gb(caminho_arquivo)
+                tamanho_formatado = formatar_tamanho_em_gb(tamanho_gb)
+                aviso = verificar_tamanho_pst(caminho_arquivo)
+                sz = 1
 
                 if tamanho_gb > sz:
-                    label.setAlignment(Qt.AlignCenter)
-                    layout.addWidget(label)
-                    central_widget.setLayout(layout)
 
-                    janela.show()
-                    sys.exit(app.exec_())
-            else:
-                print(f'caminho do arquivo:  {caminho_arquivo}')
-                print('tamanho ok')
-        except Exception as e:
-            print(f'Parou: {e}')
+                    app = QApplication(sys.argv)
+                    janela = QMainWindow()
+                    janela.setWindowTitle("Tamanho PST")
+                    janela.setWindowIcon(QIcon(
+                        fr"C:\Users\guilhermemachado\Documents\GitHub\Python-Programs\Size_Archive\alien.ico"))
+                    janela.setGeometry(100, 100, 400, 200)
 
-        sleep(15)
+                    central_widget = QWidget(janela)
+                    janela.setCentralWidget(central_widget)
+
+                    layout = QVBoxLayout()
+                    label = QLabel()
+
+                    if tamanho_gb is not None:
+                        if tamanho_gb > sz:
+                            label.setText(
+                                f"O tamanho do arquivo PST é {tamanho_formatado}")
+                            if aviso:
+                                label.setText(aviso)
+                    else:
+                        label.setText(
+                            f"O arquivo {caminho_arquivo} não foi encontrado")
+
+                    if tamanho_gb > sz:
+                        label.setAlignment(Qt.AlignCenter)
+                        layout.addWidget(label)
+                        central_widget.setLayout(layout)
+
+                        janela.show()
+                        sys.exit(app.exec_())
+                else:
+                    print(f'caminho do arquivo:  {caminho_arquivo}')
+                    print('tamanho ok')
+            except Exception as e:
+                print(f'Parou: {e}')
+                break
+            sleep(15)
 
 
 if __name__ == "__main__":
     # Adiciona o script aos serviços de inicialização do Windows
     # add_to_startup()
 
+    # executa o programa
     main()
