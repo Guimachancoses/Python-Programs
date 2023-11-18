@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+botAbast/__init__.py
+botAbast/__main__.py
+botAbast/bot.py
+botAbast.egg-info/PKG-INFO
+botAbast.egg-info/SOURCES.txt
+botAbast.egg-info/dependency_links.txt
+botAbast.egg-info/requires.txt
+botAbast.egg-info/top_level.txt
+botAbast/resources/start.png
