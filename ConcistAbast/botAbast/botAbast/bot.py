@@ -18,6 +18,7 @@ class Bot(DesktopBot):
             # Verifica se a imagem "click_ok" é encontrada
             if not self.find( "click_ok", matching=0.97, waiting_time=10000):
                 self.not_found("click_ok")
+                
             else:
                 # Se a imagem for encontrada, clique nela
                 self.click()
@@ -27,17 +28,18 @@ class Bot(DesktopBot):
 
             # Verifica se a imagem "clouse_click" é encontrada
             if not self.find( "fechar", matching=0.97, waiting_time=10000):
-                self.not_found("fechar")            
+                self.not_found("fechar")
+                            
             else:
                 # Se a imagem for encontrada, clique nela
                 self.click()
-                print ('click do oo FECHAR')
+                print ('click do FECHAR')
             
             sleep(2)
                 
             if not self.find( "click_1", matching=0.97, waiting_time=10000):
-                self.not_found("click_1")
-                
+                self.not_found("click_1")           
+               
             else:
                 self.click()
                 print('Alternando 1')
