@@ -1,4 +1,0 @@
-# insertUsers
-
-Db insertUsers
-
