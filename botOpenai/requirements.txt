@@ -1,9 +1,0 @@
-selenium
-webdriver-manager
-key
-By
-Options
-os-win
-requests
-openai
-PySimpleGUI

@@ -2,13 +2,12 @@ from googleapiclient.discovery import build
 
 class PesquisaGoogle:
     def __init__(self):
-        self.key = 'chave_api'
-        self.engineID = 'id-search-engine'
+        # self.key = ''
+        self.key = 'developer_key'
+        # self.engineID = ''
+        self.engineID = 'search_engine_id'
         self.service = build('customsearch', 'v1', developerKey=self.key)
         self.search_engine_id = self.engineID
-
-    def iniciar_conversa(self):
-        print("Bem-vindo! Como posso ajudar?")
 
     def enviar_pergunta(self, pergunta):
         # Defina a consulta de pesquisa
@@ -33,19 +32,15 @@ class PesquisaGoogle:
             if 'Protheus' not in query:
                 resposta = "Desculpe, não tenho essa informação."
             else:
-                resposta = "Sua dúvida: " + query + "\n\nLinks da Central de Atendimento Totvs:\n" + "\n".join(links)
+                resposta = "\n\nLinks da Central de Atendimento Totvs:\n" + "\n".join(links)
 
         except Exception as e:
             resposta = f"Ocorreu um erro ao processar sua pergunta: {str(e)}"
 
         return resposta
 
-# Chave do desenvolvedor e ID do mecanismo de pesquisa
-# developer_key = 'AIzaSyBLeRwutF-5JvZI9kTxquBBPLp9yrIZPWE'
-# search_engine_id = '2556c552421d44ba5'
-
 # # Inicialize a classe PesquisaGoogle
-# pesquisa = PesquisaGoogle(developer_key, search_engine_id)
+# pesquisa = PesquisaGoogle()
 
 # # Digitar a pergunta
 # pergunta = input("Digite sua pergunta: ")
