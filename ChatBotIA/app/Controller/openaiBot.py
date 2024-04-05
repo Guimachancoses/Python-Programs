@@ -2,8 +2,7 @@ import openai
 
 class Openai:
     def __init__(self):
-        # self.key = ''
-        self.key = 'key_api'
+        self.key = ''
         self.api_key = self.key
         openai.api_key = self.key
 

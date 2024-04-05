@@ -12,8 +12,8 @@ class ZapBot:
     dir_path = os.getcwd()
     
     # Caminho onde será criada pasta profile
-    profile = os.path.join(dir_path, fr"C:\Users\guilhermemachancoses\Documents", "wpp")
-
+    # profile = os.path.join(dir_path, fr"C:\Users\guilhermemachancoses\Documents", "wpp")
+    profile = os.path.join(dir_path, fr"C:\Users\Guilherme\Documents", "wpp")
     def __init__(self):
         self.options = webdriver.ChromeOptions()
         self.options.add_argument("--disable-notifications")
@@ -147,9 +147,9 @@ class ZapBot:
                 texto = elemento.text.strip().split("\\")[0]
                 if texto:  # Verifica se o texto não está vazio
                     msg = str(texto[0:-6])
-                    # conteudo = msg.split("\\")[0]
+                    conteudo = msg.split("\n")[0]
                     hora = str(texto[-5:])
-                    lista_resposta.append(msg)
+                    lista_resposta.append(conteudo)
                     lista_horas.append(hora)
 
             # Verifique se há pelo menos uma mensagem antes de acessar a última

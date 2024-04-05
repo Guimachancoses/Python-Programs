@@ -19,7 +19,12 @@ class MainApp:
         # váriaveis das opções de suporte:        
         self.retorno_suporte = ""
         self.imp = "" # 1
-        # váriaveis das opções de suporte:
+        # váriaveis das opções de rede:
+        self.retorno_rede = ""
+        self.netOff = ""
+        self.vpnOff = ""
+        self.pageOff = ""
+        # váriaveis das opções de totvs:
         self.retorno_totvs = ""        
         self.uslock = "" # 1
         self.sysOff = "" # 2
@@ -33,7 +38,7 @@ class MainApp:
                 if nova_msg != "sair":
                     if nova_msg is not None and nova_msg != self.msg:
                         self.msg = nova_msg
-                        if self.msg is not None and self.retorno_suporte == "" and self.retorno_totvs == "":
+                        if self.msg is not None and self.retorno_suporte == "" and self.retorno_totvs == "" and self.retorno_rede == "":
                             
                             if self.msg is not None and self.msg == "help":
                                 self.menu.show_menu()
@@ -42,7 +47,7 @@ class MainApp:
                             elif self.msg is not None and self.msg == "suporte":
                                 self.retorno_suporte = self.menu.suporte()
                             elif self.msg is not None and self.msg == "rede":
-                                self.menu.rede()
+                                self.retorno_rede = self.menu.rede()
                             elif self.msg is not None and self.msg == "acessos":
                                 self.menu.acessos()
                             elif self.msg is not None and self.msg == "totvs":
@@ -50,7 +55,7 @@ class MainApp:
                             else:
                                 self.bot.envia_msg('Desculpe não entendi, por gentileza digite uma opção válida.')
                         
-                         # -----------------------------------------------------------------------------------------------------
+                        # -----------------------------------------------------------------------------------------------------
                         # Caso suporte mostre as opções:           
                         elif self.msg is not None and self.retorno_suporte == "1" and self.imp == "":
                             if self.msg == "1":
@@ -59,8 +64,36 @@ class MainApp:
                                 self.menu.pc_nao_liga()
                             elif self.msg == "help" or self.msg == "sair":
                                 self.retorno_suporte = ""
+                            else:
+                                self.bot.envia_msg('Desculpe não entendi, por gentileza digite uma opção válida.')
                         
                         # Envia para openai a mensagem do usuário e depois envia a mensagem de resposta da openai         
+                        elif self.msg is not None and self.retorno_suporte == "1" and self.imp == "1":
+                            nova_msg = ""
+                            while self.msg != "sair" and nova_msg is not None and nova_msg != self.msg:                    
+                                msg = self.msg
+                                resposta_openai = self.openai.iniciar_conversa(msg)
+                                if resposta_openai != "":
+                                    # retorna a resposta da openai
+                                    self.bot.envia_msg(resposta_openai)
+                                    nova_msg = self.bot.ultima_msg()
+                                    self.msg = nova_msg
+                        
+                        # -----------------------------------------------------------------------------------------------------
+                        # Caso rede mostre as opções:           
+                        elif self.msg is not None and self.retorno_rede == "1" and self.netOff == "" and self.vpnOff == "" and self.pageOff == "":
+                            if self.msg == "1":
+                                self.netOff = self.menu.net_off()
+                            elif self.msg == "2":
+                                anydesk = self.vpnOff = self.menu.vpn_off()
+                            elif self.msg == "3":
+                                page_out = self.pageOff = self.menu.page_off()
+                            elif self.msg == "help" or self.msg == "sair":
+                                self.retorno_rede = ""
+                            else:
+                                self.bot.envia_msg('Desculpe não entendi, por gentileza digite uma opção válida.')
+                        
+                        # Envia Beautifulsoup para testar o site:         
                         elif self.msg is not None and self.retorno_suporte == "1" and self.imp == "1":
                             nova_msg = ""
                             while self.msg != "sair" and nova_msg is not None and nova_msg != self.msg:                    
@@ -83,6 +116,8 @@ class MainApp:
                                 self.rError = self.menu.routine_error()
                             elif self.msg == "help" or self.msg == "sair":
                                 self.retorno_totvs = ""
+                            else:
+                                self.bot.envia_msg('Desculpe não entendi, por gentileza digite uma opção válida.')
                                 
                         # Envia para gemini a mensagem do usuário e depois envia a mensagem de resposta da gemini         
                         elif self.msg is not None and self.retorno_totvs == "1" and self.rError == "1":
@@ -96,8 +131,7 @@ class MainApp:
                                     self.bot.envia_msg(resposta_gemini)
                                     self.bot.envia_msg(resposta_search)
                                     nova_msg = self.bot.ultima_msg()
-                                    self.msg = nova_msg
-                                
+                                    self.msg = nova_msg                                
                                 
                         else:
                             self.bot.envia_msg('Desculpe não entendi, por gentileza digite uma opção válida.')
@@ -108,13 +142,17 @@ class MainApp:
                     break
                     
         except TimeoutError:
-            print("Ocorreu um timeout. Finalizando o programa...")
-        except Exception as e:
-            print("Ocorreu um erro inesperado:", e)
-        finally:
+            print("Ocorreu um timeout.")
             print("Reiniciando o programa em 2 minutos...")
             sleep(120)  # Espera 2 minutos
             main()
+        except Exception as e:
+            print("Ocorreu um erro inesperado:", e)
+            print("Reiniciando o programa em 2 minutos...")
+            sleep(120)  # Espera 2 minutos
+            main()
+        except KeyboardInterrupt:
+            print("O usuário interrompeu o programa. Finalizando o programa...")
             
 def main():
     # Crie uma instância de MainApp e execute o método run

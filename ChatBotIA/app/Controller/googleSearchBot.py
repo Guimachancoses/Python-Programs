@@ -2,10 +2,8 @@ from googleapiclient.discovery import build
 
 class PesquisaGoogle:
     def __init__(self):
-        # self.key = ''
-        self.key = 'developer_key'
-        # self.engineID = ''
-        self.engineID = 'search_engine_id'
+        self.key = ''
+        self.engineID = ''
         self.service = build('customsearch', 'v1', developerKey=self.key)
         self.search_engine_id = self.engineID
 

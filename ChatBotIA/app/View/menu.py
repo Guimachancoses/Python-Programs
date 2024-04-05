@@ -67,7 +67,7 @@ class Menu:
     # Caso a escolha em rede for 1:
     def page_off(self):
         pageOff = "1"
-        self.bot.envia_msg("Entendo, você está problemas para acessar um site. \nPor gentileza informe link do site.")
+        self.bot.envia_msg("Entendo, você está problemas para acessar um site. \nPor gentileza informe o link do site.")
         return pageOff
 
     #--------------------------------------------------------------------------------------------------------------------------------------
