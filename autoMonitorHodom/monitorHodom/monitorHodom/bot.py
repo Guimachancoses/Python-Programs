@@ -79,14 +79,9 @@ class Bot(DesktopBot):
             except Exception as e:
                 print(f"Error: {e}")
                 self.action()
-
-        
-        
-        
-        
+ 
     def not_found(self, label):
         print(f"Element not found: {label}")
-
 
 if __name__ == '__main__':
     Bot.main()
