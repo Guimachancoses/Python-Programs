@@ -64,7 +64,7 @@ def change_status(browser):
     try:
         userList = ['1005','1021',
                     '3006',
-                    '5002','5009','5020','5022','5024','5030','5051','5053','5055','5064','5069','5071','5074','5075','5077','5078','5082','5091','5093',
+                    '5002','5009','5020','5022','5024','5030','5051','5053','5055','5064','5066','5069','5071','5074','5075','5077','5078','5080','5082','5086','5091','5093',
                     '6009','6010','6015']
         input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
 
@@ -130,7 +130,7 @@ def main():
                 current_time = now.time()
                 print(current_time)
                 if (current_time >= datetime.time(8, 0) and current_time <= datetime.time(12, 0)) or \
-                   (current_time >= datetime.time(13, 0) and current_time <= datetime.time(18, 0)):
+                   (current_time >= datetime.time(13, 0) and current_time <= datetime.time(22, 0)):
                     change_status(browser)
 
                 navigate_to_extensions(browser)
