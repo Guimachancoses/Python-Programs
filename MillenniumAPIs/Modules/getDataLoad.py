@@ -3,7 +3,7 @@ from Modules.getToken import getToken
 import requests
 
 # Função para fazer a solicitação ao endpoint com os parâmetros datefrom e dateto
-def fetchEventReport(datefrom, dateto):
+def fetchEventReport(endpoint):
     # Obter o token usando a função getToken
     token = getToken()
     if not token:
@@ -11,7 +11,7 @@ def fetchEventReport(datefrom, dateto):
         return None
 
     # Configurar a URL do endpoint com os parâmetros datefrom e dateto
-    url = f"https://api3-ng.tracknow.com/reports/eventreport.php?userlanguageid=3&timezone=America%2FSao_Paulo&datefrom={datefrom}&dateto={dateto}&plate=&canspeedoperator1=geq&canspeed1=&canspeedoperator2=leq&canspeed2=&gpsspeedoperator1=geq&gpsspeed1=&gpsspeedoperator2=leq&gpsspeed2=&rpmoperator1=geq&rpm1=&rpmoperator2=leq&rpm2=&vehiclebrandid=&deviceid=&devicefunctionid=&devicetypeid=&devicebrandid=&showtelemetry=set&companyid%5B%5D=361&countryid=&regionid=&uploadprotocol=&eventid=&showgpsspeed=set&showcanspeed=set&showignition=set&showodometer=set&showlatitude=set&showlongitude=set&showaltitude=set&showheading=set&showrpm=set&showevent=set&showeventtime=set&showeventvalue=set&showeventtypeid=set&gbcompany=set&gbdeviceid=set&gbdevicetype=set&gbvehicleid=set&gbvehicle=set&gbdriver=set&gbeventtype=set"
+    url = endpoint
 
     # Exibir a URL que será usada na requisição
     # print(f"URL da requisição: {url}")

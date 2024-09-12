@@ -2,12 +2,12 @@ import pyodbc
 from Modules.connectSQL import connect_to_database
 from datetime import datetime
 
-def get_last_event_timestamp(connection):
+def get_last_event_timestamp(view, connection):
     cursor = connection.cursor()
     
     try:
         # Executa a consulta para obter a última data
-        query = "SELECT MAX(eventtimestamp) AS LastEventTimestamp FROM telemetria;"
+        query = view
         cursor.execute(query)
         
         # Recupera o resultado
@@ -20,17 +20,18 @@ def get_last_event_timestamp(connection):
                 last_event_timestamp = datetime.fromisoformat(last_event_timestamp_str.replace("Z", "+00:00"))
                 
                 # Formata a data no formato desejado
-                formatted_timestamp = last_event_timestamp.strftime("%Y-%m-%d+%H:%M:%S")
+                # formatted_timestamp = last_event_timestamp.strftime("%Y-%m-%d+%H:%M:%S")
                 print("------------------------------------------------------")
-                print(f"Última data do evento formatada: {formatted_timestamp}")
+                print(f"Última data do evento retornada: {last_event_timestamp}")
                 print("------------------------------------------------------\n")
                 return last_event_timestamp
             except ValueError as e:
                 print(f"Erro ao converter a data: {e}")
                 return None
         else:
-            print("Nenhum evento encontrado.")
-            return None
+            last_event_timestamp = "2024-08-01 00:00:00-03"
+            event_time = datetime.fromisoformat(last_event_timestamp.replace("Z", "+00:00"))
+            return event_time
     
     except pyodbc.Error as e:
         print(f"Erro ao executar a consulta: {e}")

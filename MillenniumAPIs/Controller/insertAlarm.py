@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 import pyodbc
 
 
-def insert_telemetry_data(connection, data, batch_size=1000):
+def insert_alarm_data(connection, data, batch_size=1000):
     cursor = connection.cursor()
     total_inserted = 0  # Contador para total de registros inseridos
 
@@ -14,23 +14,23 @@ def insert_telemetry_data(connection, data, batch_size=1000):
 
             # Cria a query SQL com parâmetros
             merge_query = """
-            MERGE INTO telemetria AS target
+            MERGE INTO ALARM AS target
             USING (VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)) AS source
-            (vehicleid, plate, driverid, driver, company, deviceid, device_type, eventtypeid, event_type, eventvalue, eventid, eventtimestamp, gpsspeed, canspeed, odometer, rpm, ignition, latitude, longitude, altitude, heading, url)
-            ON target.eventid = source.eventid
+            (vehicleid, plate, driverid, driver, company, region, deviceid, serial, alarmtypeid, alarmtype, alarmdefinitionid, alarmdefinition, alarmstarttime, gpsspeed, canspeed, odometer, rpm, ignition, latitude, longitude, altitude, url)
+            ON target.alarmstarttime = source.alarmstarttime and target.vehicleid = source.vehicleid
             WHEN NOT MATCHED BY TARGET THEN
-                INSERT (vehicleid, plate, driverid, driver, company, deviceid, device_type, eventtypeid, event_type, eventvalue, eventid, eventtimestamp, gpsspeed, canspeed, odometer, rpm, ignition, latitude, longitude, altitude, heading, url)
-                VALUES (source.vehicleid, source.plate, source.driverid, source.driver, source.company, source.deviceid, source.device_type, source.eventtypeid, source.event_type, source.eventvalue, source.eventid, source.eventtimestamp, source.gpsspeed, source.canspeed, source.odometer, source.rpm, source.ignition, source.latitude, source.longitude, source.altitude, source.heading, source.url);
+                INSERT (vehicleid, plate, driverid, driver, company, region, deviceid, serial, alarmtypeid, alarmtype, alarmdefinitionid, alarmdefinition, alarmstarttime, gpsspeed, canspeed, odometer, rpm, ignition, latitude, longitude, altitude, url)
+                VALUES (source.vehicleid, source.plate, source.driverid, source.driver, source.company, source.region, source.deviceid, source.serial, source.alarmtypeid, source.alarmtype, source.alarmdefinitionid, source.alarmdefinition, source.alarmstarttime, source.gpsspeed, source.canspeed, source.odometer, source.rpm, source.ignition, source.latitude, source.longitude, source.altitude, source.url);
             """
 
             # Para cada lote, executa o merge com os dados parametrizados
             for row in batch_data:
                 cursor.execute(merge_query, (
                     row["vehicleid"], row["plate"], row["driverid"], row["driver"], row["Company"],
-                    row["deviceid"], row["Device type"], row["eventtypeid"], row["Event type"],
-                    row["eventvalue"], row["eventid"], row["eventtimestamp"], row["gpsspeed"],
+                    row["Region"], row["deviceid"], row["serial"], row["alarmtypeid"], row["Alarm type"],
+                    row["alarmdefinitionid"], row["Alarm Definition"], row["alarmstarttime"], row["gpsspeed"],
                     row["canspeed"], row["odometer"], row["rpm"], row["ignition"], row["latitude"],
-                    row["longitude"], row["altitude"], row["heading"], row["url"]
+                    row["longitude"], row["altitude"], row["url"]
                 ))
 
             # Atualiza o contador de registros inseridos
@@ -38,7 +38,8 @@ def insert_telemetry_data(connection, data, batch_size=1000):
 
         # Commit após os lotes
         connection.commit()  # Confirma as inserções
-        print(f"Dados inseridos com sucesso! \nTotal de registros inseridos: {total_inserted} \n")
+        print(f"Dados inseridos com sucesso! \nTotal de registros inseridos: {
+              total_inserted} \n")
 
     except pyodbc.Error as e:
         connection.rollback()  # Reverte em caso de erro
@@ -51,19 +52,21 @@ def insert_telemetry_data(connection, data, batch_size=1000):
 
 
 def adjust_dates(last_event_timestamp):
+    dateToaj = ""
+    dateFromaj = ""
     # Ajusta o dateFrom com base nas condições de hora e minuto
-    if last_event_timestamp.hour == 23 and last_event_timestamp.minute >= 55:
-        # Se for após 23:55, define para 00:00 do próximo dia
+    if last_event_timestamp.hour == 23 and last_event_timestamp.minute >= 0:
+        # Se for após 23:0, define para 00:00 do próximo dia
         dateFromaj = (last_event_timestamp + timedelta(days=1)
                       ).replace(hour=0, minute=0, second=0)
-    elif last_event_timestamp.hour == 17 and last_event_timestamp.minute >= 55:
-        # Se for após 17:55, define para 18:00 do mesmo dia
+    elif last_event_timestamp.hour == 17 and last_event_timestamp.minute >= 0:
+        # Se for após 17:0, define para 18:00 do mesmo dia
         dateFromaj = last_event_timestamp.replace(hour=18, minute=0, second=0)
-    elif last_event_timestamp.hour == 11 and last_event_timestamp.minute >= 55:
-        # Se for após 11:55, define para 12:00 do mesmo dia
+    elif last_event_timestamp.hour == 11 and last_event_timestamp.minute >= 0:
+        # Se for após 11:0, define para 12:00 do mesmo dia
         dateFromaj = last_event_timestamp.replace(hour=12, minute=0, second=0)
-    elif last_event_timestamp.hour == 5 and last_event_timestamp.minute >= 55:
-        # Se for após 05:55, define para 06:00 do mesmo dia
+    elif last_event_timestamp.hour == 5 and last_event_timestamp.minute >= 0:
+        # Se for após 05:0, define para 06:00 do mesmo dia
         dateFromaj = last_event_timestamp.replace(hour=6, minute=0, second=0)
     else:
         # Caso contrário, apenas soma 1 segundo ao last_event_timestamp
@@ -73,14 +76,15 @@ def adjust_dates(last_event_timestamp):
     hour = dateFromaj.hour
     minute = dateFromaj.minute
 
-    if (hour == 0 and minute >= 0) or (hour < 6 and minute < 40):
-        dateToaj = dateFromaj.replace(hour=5, minute=59, second=0)
-    elif (hour == 6 and minute >= 0) or (hour < 12 and minute < 40):
-        dateToaj = dateFromaj.replace(hour=11, minute=59, second=0)
-    elif (hour == 12 and minute >= 0) or (hour < 18 and minute < 40):
-        dateToaj = dateFromaj.replace(hour=17, minute=59, second=0)
-    elif (hour == 18 and minute >= 0) or (hour < 23 and minute < 40):
-        dateToaj = dateFromaj.replace(hour=23, minute=59, second=0)
+    if (hour == 0 and minute >= 0) or (hour < 11 and minute <= 40):
+        dateToaj = (last_event_timestamp + timedelta(days=1)).replace(hour=11, minute=59, second=0)
+    elif (hour == 11 and minute >= 0) or (hour < 23 and minute <= 59):
+        dateToaj = (last_event_timestamp + timedelta(days=1)).replace(hour=23, minute=59, second=0)
+        
+    elif (hour == 23 and minute >= 0):
+         dateToaj = dateFromaj.replace(hour=11, minute=59, second=0)
+    # elif (hour == 18 and minute >= 0) or (hour < 23 and minute <= 40):
+    #     dateToaj = dateFromaj.replace(hour=23, minute=59, second=0)
 
     # Formata as datas para string no formato desejado
     dateFrom_str = dateFromaj.strftime("%Y-%m-%d+%H:%M:%S")
@@ -124,8 +128,8 @@ def get_current_time_brasilia():
 
 
 # Exemplo de uso da função insert_telemetry_data
-def Main():
-
+def MainAlarm():
+    query = "SELECT MAX(alarmstarttime) AS LastEventTimestamp FROM ALARM;"
     json_data = [1]
     dateTo_str = "2021-05-01+00:00:00"
 
@@ -138,7 +142,7 @@ def Main():
     # Remove o sinal "+" para que o formato seja reconhecido corretamente
     dateToc = datetime.strptime(dateTo_str, "%Y-%m-%d+%H:%M:%S")
     horaAtual2 = datetime.strptime(horaAtual2_str, "%Y-%m-%d %H:%M:%S")
-    
+
     tdInsert = 0
 
     while json_data and (dateToc <= horaAtual2):
@@ -146,7 +150,7 @@ def Main():
         connection = connect_to_database()
 
         # Obtém a última data do evento
-        last_event_timestamp = get_last_event_timestamp(connection)
+        last_event_timestamp = get_last_event_timestamp(query, connection)
 
         if connection:
             # Exemplo de como chamar fetchEventReport para obter os dados
@@ -158,22 +162,23 @@ def Main():
             if dateToc >= horaAtual2:
                 dateTo = get_current_time_brasilia()
 
+            url = f"https://api3-ng.tracknow.com/reports/alarmreport.php?userlanguageid=3&timezone=America%2FSao_Paulo&datefrom={datefrom}&dateto={dateTo}&plate=&canspeedoperator1=geq&canspeed1=&canspeedoperator2=leq&canspeed2=&gpsspeedoperator1=geq&gpsspeed1=&gpsspeedoperator2=leq&gpsspeed2=&rpmoperator1=geq&rpm1=&rpmoperator2=leq&rpm2=&vehiclebrandid=&deviceid=&devicefunctionid=&devicetypeid=&devicebrandid=&countryid=&regionid=&uploadprotocol=&alarmid=&eventid=&showalarmstarttime=set&showgpsspeed=set&showcanspeed=set&showignition=set&showodometer=set&showlatitude=set&showlongitude=set&showaltitude=set&showrpm=set&gbcompany=set&gbdeviceid=set&gbdevice=set&showalarmtypeid=set&gbalarmtype=set&showalarmdefinitionid=set&gbalarmdefinition=set&gbvehicle=set&gbdriver=set&gbregion=set"
+
         # Exemplo de como chamar fetchEventReport para obter os dados
-            json_data = fetchEventReport(datefrom, dateTo)
+            json_data = fetchEventReport(url)
 
             if json_data and "rows" in json_data:
-                totalInsert = insert_telemetry_data(
+                totalInsert = insert_alarm_data(
                     connection, json_data["rows"])
-                
+
                 tdInsert += totalInsert
 
                 if totalInsert == 0:
                     # Fecha a conexão com o banco de dados
                     connection.close()
                     exit
-                
 
         # Fecha a conexão com o banco de dados
             connection.close()
-
-    print(f"Total de dados inseridos: {tdInsert}")
+            
+    return tdInsert
