@@ -30,10 +30,10 @@ def copy_file():
         print('Conectado...')
 
         # Diretório origem dos arquivos que serão copiados:
-        orig_dir = fr"X:"
+        orig_dir = fr"\\192.168.0.250\tms"
 
         # Primeiro diretório destino para onde os arquivos serão copiados
-        dest_dir = '/xmlnfe/new'
+        dest_dir = '/xmltms/new'
 
         # Segundo diretório destino para onde os arquivos serão copiados
         dest_dir_seg = 'J:\Guilherme\ImportadosTMS'
