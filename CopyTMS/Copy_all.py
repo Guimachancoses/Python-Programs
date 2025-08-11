@@ -38,7 +38,7 @@ def copy_file():
         # Segundo diretório destino para onde os arquivos serão copiados
         dest_dir_seg = 'J:\Guilherme\ImportadosTMS'
 
-        # Mudar para o diretório destino no servidor SFTP
+        # Mudar para o diretório destino no servidor SFTP-
         sftp.cwd('/')
 
         # Criar o diretório de destino se não existir
