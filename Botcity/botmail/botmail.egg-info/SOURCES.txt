@@ -1,0 +1,14 @@
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.py
+botmail/__init__.py
+botmail/__main__.py
+botmail/bot.py
+botmail.egg-info/PKG-INFO
+botmail.egg-info/SOURCES.txt
+botmail.egg-info/dependency_links.txt
+botmail.egg-info/requires.txt
+botmail.egg-info/top_level.txt
+botmail/resources/start.png
