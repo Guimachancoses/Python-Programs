@@ -15,58 +15,81 @@ from time import sleep
 def login(browser):
     browser.get("https://garbuio.my3cx.com.br/#/login")
     login_field = browser.find_element(
-        By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[1]/input')
+        By.XPATH, '//*[@id="loginInput"]')
     password_field = browser.find_element(
-        By.XPATH, '//*[@id="content"]/login-component/div/div/form/div/div[2]/input')
+        By.XPATH, '//*[@id="passwordInput"]')
     login_field.send_keys('5201')
     password_field.send_keys('L7jWz9qZGs')
-    browser.find_element(By.XPATH, '//*[@id="content"]/login-component/div/div/form/button') \
+    browser.find_element(By.XPATH, '//*[@id="submitBtn"]') \
         .click()
     print("Logged in successfully!")
 
-
-def navigate_to_queues(browser):
+def find_all_user_status(browser):
     try:
-        WebDriverWait(browser, 3).until(EC.presence_of_element_located(
-            (By.XPATH, '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a'))) \
-            .click()
+        # Navegar pro menu
+        WebDriverWait(browser, 3).until(
+            EC.presence_of_element_located((By.XPATH, '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a'))
+        ).click()
         print("Navigated to queues!")
-    except Exception as e:
-        print(f'Error navigate in queue: {e}')
 
+        # Esperar e capturar todos os indicadores com as classes desejadas
+        status_indicators = WebDriverWait(browser, 5).until(
+            EC.presence_of_all_elements_located(
+                (By.XPATH,
+                 "//i[contains(@class,'status-indicator') and "
+                 "("
+                     "contains(@class,'out_of_office') or "
+                     "contains(@class,'custom2') or "
+                     "contains(@class,'away')"
+                 ")"
+                 "]")
+            )
+        )
+
+        print(f"Found {len(status_indicators)} status indicators matching criteria.")
+        return status_indicators
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return []
 
 def force_user_on_queue(browser):
     try:
-        input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
-        browser.find_element('xpath', input_field_xpath).clear()
+        # Clica em mais opções
         browser.find_element(
-            'xpath', '//*[@id="app-container"]/div[1]/div/div/nav/ul/app-nav-item[2]/a').click()
+            'xpath', '/html/body/app/div/div/div/ng-component/div/layout/div/div/div[2]/ng-component/layout-type2/div/div/people-list/ul/people-tile/span/div/a[5]').click()
         sleep(1)
-        browser.find_element(
-            'xpath', '//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
-        browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()
-        sleep(15)
-        browser.find_element(
-            'xpath', '/html/body/div[1]/div/div/div/div[2]/select[2]/option[3]').click()
+        # clica em definiir status
+        element = WebDriverWait(browser, 5).until(
+            EC.element_to_be_clickable((By.XPATH, "//a[contains(@class,'dropdown-item')]//span[normalize-space()='Definir status']"))
+        )
+        element.click()
         sleep(1)
+        # clica na caixa de opções
         browser.find_element(
-            'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
+            'xpath', '/html/body/modal-container/div[2]/div/ng-component/app-modal-dialog/div[2]/field-select/field-wrapper/div[1]/div[2]/ng-select/div/div/div[3]').click()
         sleep(1)
+        # seleciona disponível
         browser.find_element(
-            'xpath', '//*[contains(concat( " ", @class, " " ), concat( " ", "mc-select", " " ))]//i').click()
-        print("User forced on queue successfully!")
+            'xpath', '/html/body/modal-container/div[2]/div/ng-component/app-modal-dialog/div[2]/field-select/field-wrapper/div[1]/div[2]/ng-select/ng-dropdown-panel/div/div[2]/div[1]').click()
+        sleep(1)
+        # clica em salvar
+        browser.find_element(
+            'xpath', '/html/body/modal-container/div[2]/div/ng-component/app-modal-dialog/div[3]/span/button').click()
+        print("User forced on status successfully!")
     except Exception as e:
         print(f'Error forcing user on queue: {e}')
         traceback.print_exc()
 
 
-def change_status(browser):
+def select_user(browser):
     try:
-        userList = ['1005','1021',
+        userList = ['1021',
                     '3006',
-                    '5002','5009','5020','5022','5024','5030','5051','5053','5055','5064','5066','5069','5071','5074','5075','5077','5078','5080','5082','5086','5091','5093',
+                    '5020','5024','5030','5047','5051','5052','5053','5054','5055','5066','5069','5071','5075','5077','5078','5080','5082','5086','5091',
+                    '5304',
                     '6009','6010','6015']
-        input_field_xpath = '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/div[1]/input'
+        input_field_xpath = '//*[@id="inputSearch"]'
 
         for user in userList:
             # Limpa o campo de entrada
@@ -74,29 +97,11 @@ def change_status(browser):
             browser.find_element('xpath', input_field_xpath).send_keys(
                 user)  # Envia o número do ramal
             sleep(1)
-            # Marca a caixa de seleção do usuário
-            browser.find_element(
-                'xpath', '/html/body/div/div/div/div[2]/div[2]/div[2]/extension-list/div/div[2]/div/div[3]/table/tbody/tr/td[1]/label/i').click()
-            # Clica no botão de status
-            browser.find_element('xpath', '//*[(@id = "btnStatus")]').click()
-            sleep(5)
-            # Seleciona a opção 'disponível'
-            browser.find_element(
-                'xpath', '/html/body/div[1]/div/div/div/div[2]/select[1]/option[2]').click()
-            sleep(1)
-            # Fecha a janela de diálogo
-            browser.find_element(
-                'xpath', '/html/body/div[1]/div/div/div/div[1]/button').click()
-            sleep(1)
-            print(f"Ramal {user} forced on status successfully!")
+            print(f"Ramal {user} find user successfully!")
+            force_user_on_queue(browser)
     except Exception as e:
         print(f'Error forcing ramal {user} on status: {e}')
         traceback.print_exc()
-
-
-def navigate_to_extensions(browser):
-    browser.get('https://garbuio.my3cx.com.br/#/app/system_status/all')
-    print("Navigated to extensions!")
 
 
 def main():
@@ -123,17 +128,15 @@ def main():
             login(browser)
             while True:
                 now = datetime.datetime.now()
-                navigate_to_queues(browser)
-                force_user_on_queue(browser)
+                #find_all_user_status(browser)
+                #force_user_on_queue(browser)
 
                 # Verifique o horário atual entre às 08:00 e 12 horas
                 current_time = now.time()
                 print(current_time)
                 if (current_time >= datetime.time(8, 0) and current_time <= datetime.time(12, 0)) or \
                    (current_time >= datetime.time(13, 0) and current_time <= datetime.time(22, 0)):
-                    change_status(browser)
-
-                navigate_to_extensions(browser)
+                    select_user(browser)
                 
         except Exception as e:
             print(f'Error: {e}')
